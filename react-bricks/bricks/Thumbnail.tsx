@@ -1,6 +1,7 @@
 import React from "react";
 import { RichText, Text, types } from "react-bricks/frontend";
 import Button from "../../components/Button";
+import Notification from "../../components/Notification";
 
 const Thumbnail: types.Brick = () => {
   return (
@@ -8,6 +9,7 @@ const Thumbnail: types.Brick = () => {
       <Text propName="title" renderBlock={({ children }) => <h1 className="text-2xl font-bold">{children}</h1>} placeholder="Type a title..." />
       <RichText propName="description" renderBlock={({ children }) => <p className="text-lg text-gray-500">{children}</p>} placeholder="Type a description" allowedFeatures={[types.RichTextFeatures.Bold, types.RichTextFeatures.Highlight]} />
       <Button kind="secondary">Follow us</Button>
+      <Notification type="error" content="I am an alert." />
     </div>
   );
 };
